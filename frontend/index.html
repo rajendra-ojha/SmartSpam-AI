@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSpam AI | Spam Detection System</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="background-circle circle1"></div>
+<div class="background-circle circle2"></div>
+
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="logo">
+                🛡️
+            </div>
+
+            <div>
+
+                <h1>SmartSpam AI</h1>
+
+                <p>AI-Powered Spam Detection System</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="status">
+
+            <span></span>
+
+            AI Model Online
+
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <div class="badge">
+                🤖 Machine Learning Powered
+            </div>
+
+
+            <h2>
+
+                Detect
+                <span>Spam</span>
+
+                <br>
+
+                Before It Reaches You
+
+            </h2>
+
+
+            <p>
+
+                Analyze message characteristics and let
+                <strong>SmartSpam AI</strong> classify the
+                message using your trained machine learning model.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="shield">
+
+                🛡️
+
+                <div class="check">
+                    ✓
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ANALYSIS CARD -->
+
+    <section class="card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <h3>
+                    Message Analysis
+                </h3>
+
+                <p>
+                    Enter the message characteristics
+                </p>
+
+            </div>
+
+
+            <div class="ai-icon">
+                ⚡
+            </div>
+
+        </div>
+
+
+
+        <!-- INPUTS -->
+
+        <div class="input-grid">
+
+
+            <!-- LINKS -->
+
+            <div class="input-box">
+
+                <label>
+                    🔗 Number of Links
+                </label>
+
+                <input
+                    type="number"
+                    id="num_links"
+                    placeholder="Example: 2"
+                    min="0"
+                >
+
+                <small>
+                    Links found in the message
+                </small>
+
+            </div>
+
+
+
+            <!-- WORDS -->
+
+            <div class="input-box">
+
+                <label>
+                    📝 Number of Words
+                </label>
+
+                <input
+                    type="number"
+                    id="num_words"
+                    placeholder="Example: 50"
+                    min="0"
+                >
+
+                <small>
+                    Total words in the message
+                </small>
+
+            </div>
+
+
+
+            <!-- SPECIAL CHARACTERS -->
+
+            <div class="input-box">
+
+                <label>
+                    🔣 Special Characters
+                </label>
+
+                <input
+                    type="number"
+                    id="num_special_chars"
+                    placeholder="Example: 8"
+                    min="0"
+                >
+
+                <small>
+                    Special characters detected
+                </small>
+
+            </div>
+
+
+
+            <!-- SPAM KEYWORDS -->
+
+            <div class="input-box">
+
+                <label>
+                    🚨 Spammy Keywords
+                </label>
+
+                <select id="has_spammy_keywords">
+
+                    <option value="0">
+                        No spam keywords
+                    </option>
+
+                    <option value="1">
+                        Spam keywords detected
+                    </option>
+
+                </select>
+
+                <small>
+                    Does the message contain spam words?
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="predict-button"
+            onclick="predictSpam()">
+
+            🔍
+
+            Check Message
+
+            <span class="arrow">
+                →
+            </span>
+
+        </button>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="loading">
+
+            <div class="spinner"></div>
+
+            Analyzing with SmartSpam AI...
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div
+            id="result"
+            class="result">
+
+            <div
+                id="result-icon"
+                class="result-icon">
+            </div>
+
+
+            <div>
+
+                <h3 id="result-title">
+                </h3>
+
+                <p id="result-text">
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+
+        <div class="feature">
+
+            <div>
+                ⚡
+            </div>
+
+            <h4>
+                Fast Detection
+            </h4>
+
+            <p>
+                Instant machine learning prediction
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div>
+                🧠
+            </div>
+
+            <h4>
+                ML Powered
+            </h4>
+
+            <p>
+                Uses your trained spam classifier
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div>
+                🔒
+            </div>
+
+            <h4>
+                Private
+            </h4>
+
+            <p>
+                Your data stays within your application
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026
+
+        <strong>
+            SmartSpam AI
+        </strong>
+
+        • Machine Learning Project
+
+    </footer>
+
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+
+</body>
+
+</html>
