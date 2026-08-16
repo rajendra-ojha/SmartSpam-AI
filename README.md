@@ -78,15 +78,6 @@ Prediction
         v
 SPAM or NOT SPAM
 ```
-## Application Screenshots
-
-### Not Spam Result
-
-![SmartSpam AI - Not Spam](screenshot_smartspam/not-spam.png)
-
-### Spam Result
-
-![SmartSpam AI - Spam](screenshot_smartspam/spam.png)
 
 ## Features
 
